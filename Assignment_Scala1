@@ -1,0 +1,64 @@
+[acadgild@localhost ~]$ scala
+Welcome to Scala version 2.11.7 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_161).
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> val listStr = List[String]("alpha","gamma","omega","zeta","beta")
+listStr: List[String] = List(alpha, gamma, omega, zeta, beta)
+
+scala> listStr.filter(s => s.length == 4)
+res0: List[String] = List(zeta, beta)
+
+scala> listStr.count(s => s.length == 4)
+res1: Int = 2
+
+scala> val listLengths = listStr.map(_.length)
+listLengths: List[Int] = List(5, 5, 5, 4, 4)
+
+scala> val StrLengthPairs = listStr.zip(listLengths)
+StrLengthPairs: List[(String, Int)] = List((alpha,5), (gamma,5), (omega,5), (zeta,4), (beta,4))
+
+scala> scala> listStr.count(_.contains('m'))
+res16: Int = 2
+
+scala> listStr.count(_.startsWith("a"))
+res18: Int = 1
+
+
+GCD of Two Numbers
+
+scala> object GCD{
+     | def gcd(a:Int, b:Int): Int = {
+     | if(b ==0) a else gcd(b, a%b)
+     | }
+     | 
+     | def main(args: Array[String]) {
+     | println(gcd(25,15))
+     | }
+     | }
+defined object GCD
+
+scala> GCD.gcd(25,15)
+res19: Int = 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
